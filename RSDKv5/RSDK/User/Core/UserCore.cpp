@@ -311,7 +311,7 @@ void RSDK::LoadSettingsINI()
 
         engine.devMenu = true;
         if (LoadDataPack(iniparser_getstring(ini, "Game:dataFile", "Data.rsdk"), 0, useBuffer))
-            engine.devMenu = iniparser_getboolean(ini, "Game:devMenu", false);
+            engine.devMenu = iniparser_getboolean(ini, "Game:devMenu", true);
 
 #if !RETRO_USE_ORIGINAL_CODE
         customSettings.region = iniparser_getint(ini, "Game:region", -1);
